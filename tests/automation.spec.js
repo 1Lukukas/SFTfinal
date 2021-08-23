@@ -9,7 +9,6 @@ test('basic test', async ({ page }) => {
   let day = days[Math.floor(Math.random()*days.length)];
   console.log(day)
   await page.click(`text=${day}`);
-  //await page.click('text=Antradienis');
   await page.click('.v-card__text');
   let kaina = await page.textContent('button:has-text("€send")')
   kaina = kaina.slice(0, kaina.length - 6);
